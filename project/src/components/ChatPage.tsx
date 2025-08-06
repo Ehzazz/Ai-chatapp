@@ -287,7 +287,7 @@ export default function ChatPage() {
         {!isSidebarCollapsed && (
           <div className="flex-1 overflow-hidden flex flex-col">
             {/* Files Section */}
-            <div className="flex-1 p-3 md:p-4 border-b border-gray-300 min-h-0">
+            <div className="flex-1 p-3 md:p-4 border-b border-gray-300 min-h-0 flex flex-col">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wide">
                   My Files
@@ -299,7 +299,7 @@ export default function ChatPage() {
                 />
               </div>
               
-              <div className="space-y-2 overflow-y-auto flex-1">
+              <div className="space-y-2 overflow-y-auto flex-1 min-h-0 max-h-48 md:max-h-64">
                 <button
                   onClick={() => {
                     setSelectedFileId('');
@@ -355,12 +355,12 @@ export default function ChatPage() {
             </div>
 
             {/* Chat History Section */}
-            <div className="flex-1 p-3 md:p-4 min-h-0">
+            <div className="flex-1 p-3 md:p-4 min-h-0 flex flex-col">
               <h3 className="text-xs md:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3">
                 Chat History
               </h3>
               
-              <div className="space-y-2 overflow-y-auto flex-1">
+              <div className="space-y-2 overflow-y-auto flex-1 min-h-0 max-h-48 md:max-h-64">
                 {sessions.map((session) => (
                   <div
                     key={session.session_token}
